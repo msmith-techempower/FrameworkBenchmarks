@@ -36,17 +36,21 @@ get '/db' => sub {
 get '/queries' => sub {
     my $self = shift;
     my $count = $self->param('queries') || 1;
+    if ($count !~ /^d+$/) {
+        $count = 1;
+    }
     query( $count > 500 ? 500 : $count );
 };
 
-get '/fortunes' => sub {
+get '/fortune' => sub {
     my $self = shift;
     $sth1->execute();
     my $fortunes = $sth1->fetchall_arrayref({});
-    $self->template( 'fortunes', { fortunes => $fortunes } );
+    push @$fortunes, { id => 0, message => 'Additional fortune added at request time.' };
+    $self->template( 'fortunes', { fortunes => [ sort { $a->{message} cmp $b->{message} } @$fortunes] } );
 };
 
-get '/updates' => sub {
+get '/update' => sub {
     my $self  = shift;
     my $count = $self->param('queries');
     my $arr   = query( $count > 500 ? 500 : $count );

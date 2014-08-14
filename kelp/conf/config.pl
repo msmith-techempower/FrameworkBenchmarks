@@ -1,3 +1,3 @@
 {
-    modules    => ['JSON::XS', 'Template'],
+    modules    => ['JSON::XS', 'Template::Toolkit'],
 }
