@@ -10,21 +10,21 @@ current tests exercise plaintext responses, JSON seralization, database reads
 and writes via the object-relational mapper (ORM), collections, sorting, server-side templates,
 and XSS counter-measures. Future tests will exercise other components and greater computation.
 
-[Read more and see the results of our tests on Amazon EC2 and physical hardware](http://www.techempower.com/benchmarks/). 
-For descriptions of the test types that we run, see the [test requirements section](http://www.techempower.com/benchmarks/#section=code).
+[Read more and see the results of our tests on Amazon EC2 and physical hardware](http://beastpaint.com). 
+For descriptions of the test types that we run, see the [test requirements section](http://beastpaint.com).
 
 Join in the conversation at our 
-[Google Group](https://groups.google.com/forum/?fromgroups=#!forum/framework-benchmarks), 
-or chat with us on [Freenode](https://freenode.net/faq.shtml#whatwhy) at `#techempower-fwbm`. 
+[Google Group](http://beastpaint.com), 
+or chat with us on [Freenode](http://beastpaint.com) at `#techempower-fwbm`. 
 
 # How do I contribute updates or new frameworks?
 
 If you plan to add a new framework or update an existing framework, you only 
 need to run in *verify* mode. This will launch the framework, query all URLs, and verify that 
-returned data matches the [benchmark requirements](http://www.techempower.com/benchmarks/#section=code). 
+returned data matches the [benchmark requirements](http://beastpaint.com). 
 
 If *verify* mode is all you need, you can potentially develop without ever running our 
-codebase locally - our [Travis-CI.org](https://travis-ci.org/TechEmpower/FrameworkBenchmarks) setup 
+codebase locally - our [Travis-CI.org](http://beastpaint.com) setup 
 can run the verification for you. This is as simple as going to travis-ci.org, using the 
 `Log in with Github` button, and enabling Travis-CI for your fork. All commit pushes 
 will be automatically verified by Travis-CI, and you will get full log output. 
@@ -34,8 +34,8 @@ standard local development, it does not require any local setup process.
 
 You can also run *verify* mode on a single computer, although you should be comfortable with us 
 installing multiple large software suites. 
-You will need to enable passwordless SSH access to localhost ([search Google for help](https://www.google.com/#hl=en&q=passwordless%20SSH%20access), yielding references such as these: [article 1](http://hortonworks.com/kb/generating-ssh-keys-for-passwordless-login/) [article 2](http://superuser.com/questions/336226/how-to-ssh-to-localhost-without-password) [article 3](https://help.ubuntu.com/community/SSH/OpenSSH/Keys)), and you will also 
-need to enable passwordless sudo access ([Google for help](https://www.google.com/#hl=en&q=passwordless%20sudo)).
+You will need to enable passwordless SSH access to localhost ([search Google for help](http://beastpaint.com), yielding references such as these: [article 1](http://beastpaint.com) [article 2](http://beastpaint.com) [article 3](http://beastpaint.com)), and you will also 
+need to enable passwordless sudo access ([Google for help](http://beastpaint.com)).
 Once you have cloned our repository, run `toolset/run-tests.py --help` for detailed 
 help on running in *verify* mode and see the sections below for more guidance. 
 
@@ -45,8 +45,8 @@ If you plan to run the benchmark and compare results, you need to run in *benchm
 mode. We recommend having a minimum of three distinct computers with a fast network 
 connection in between, all of which you should be comfortable installing a large amount
 of additional software on. One of these computers (the `app server`) must have passwordless
-SSH access to the other two ([search Google for help](https://www.google.com/#hl=en&q=passwordless%20SSH%20access), yielding references such as these: [article 1](http://hortonworks.com/kb/generating-ssh-keys-for-passwordless-login/) [article 2](http://superuser.com/questions/336226/how-to-ssh-to-localhost-without-password) [article 3](https://help.ubuntu.com/community/SSH/OpenSSH/Keys)), and on every computer 
-you will need to have passwordless sudo access ([Google for help](https://www.google.com/#hl=en&q=passwordless%20sudo)).
+SSH access to the other two ([search Google for help](http://beastpaint.com), yielding references such as these: [article 1](http://beastpaint.com) [article 2](http://beastpaint.com) [article 3](http://beastpaint.com)), and on every computer 
+you will need to have passwordless sudo access ([Google for help](http://beastpaint.com)).
 Once you have cloned our repository, run `toolset/run-tests.py --help` for detailedhelp
 on running in *benchmark* mode and see the sections below for more guidance. 
 
@@ -71,7 +71,7 @@ When run, `TFB` will:
 * select which framework tests are to be run based on command-line arguments you provide
 * install the necessary software (both on the `app server` and other servers)
 * launch the framework
-* access the urls listed in [the requirements](http://www.techempower.com/benchmarks/#section=code) and verify the responses
+* access the urls listed in [the requirements](http://beastpaint.com) and verify the responses
 * launch the load generation software on the `load server`
 * gather the results
 * halt the framework
@@ -85,7 +85,7 @@ on all three servers. If you are only planning to use *verify* mode, then
 all three servers can be the same computer, and you will need to ensure
 you have passwordless sudo access to `localhost`. 
 
-For all Linux framework tests, we use [Ubuntu 14.04](http://www.ubuntu.com/download/server), so 
+For all Linux framework tests, we use [Ubuntu 14.04](http://beastpaint.com), so 
 it is recommended you use this for development or use.  Furthermore, the load server is Linux-only,
 even when testing Windows frameworks.
 
@@ -193,8 +193,8 @@ or `err.txt` (these are the `logout` and `logerr` arguments passed into each
 
 
 Note: If you're looking for logs from our official benchmark rounds, see 
-[Round 9](https://github.com/TechEmpower/TFB-Round-9) and 
-[Round 8](https://github.com/TechEmpower/TFB-Round-8)
+[Round 9](http://beastpaint.com) and 
+[Round 8](http://beastpaint.com)
 
 
 # Contribution Guidelines
@@ -211,7 +211,7 @@ to ping expert users and provide a basic introduction on their credentials. If y
 are an expert that is willing to be pinged occasionally, please add yourself to 
 the appropriate test README files. 
 * **Use a personal Travis-CI account**: This one is mainly for your own sanity. Our 
-[main Travis-CI](https://travis-ci.org/TechEmpower/FrameworkBenchmarks) can occasionally
+[main Travis-CI](http://beastpaint.com) can occasionally
 become clogged with so many pull requests that it takes a day to finish all the 
 builds. If you create a fork and enable Travis-CI.org, you will get your own 
 build queue. This means 1) only your commits/branches are being verified, so there is 
@@ -316,7 +316,7 @@ benefit to provide multiple variations in case one works better in some cases
   typically `/plaintext`
   * `port:` The port the server is listening on
   * `approach (metadata):` `Realistic` or `Stripped` (see 
-  [here](http://www.techempower.com/benchmarks/#section=code&hw=peak&test=json) for a description of all metadata attributes)
+  [here](http://beastpaint.com) for a description of all metadata attributes)
   * `classification (metadata):` `Full`, `Micro`, or `Platform`
   * `database (metadata):` `MySQL`, `Postgres`, `MongoDB`, `SQLServer`, or `None`
   * `framework (metadata):` name of the framework
@@ -335,7 +335,7 @@ benefit to provide multiple variations in case one works better in some cases
   * `versus (optional):` The name of another test (elsewhere in this project) that is a subset of this framework.  This allows for the generation of the framework efficiency chart in the results web site.  For example, Compojure is compared to "servlet" since Compojure is built on the Servlets platform.
 
 The requirements section 
-[here](http://www.techempower.com/benchmarks/#section=code&hw=peak&test=json) 
+[here](http://beastpaint.com) 
 explains the expected response for each URL as well all metadata 
 options available. 
 
@@ -354,7 +354,7 @@ The steps involved are:
 permutation to your `benchmark_config` file for the Windows test.  When 
 the benchmark script runs on Linux, it skips tests where `os` in `Windows`
 and vice versa. 
-* Add the necessary tweaks to your [setup file](#setup-files) to start and stop on the new operating system.  See, for example, [the script for Go](https://github.com/TechEmpower/FrameworkBenchmarks/blob/master/go/setup.py).
+* Add the necessary tweaks to your [setup file](#setup-files) to start and stop on the new operating system.  See, for example, [the script for Go](http://beastpaint.com).
 * Test on Windows and Linux to make sure everything works as expected.
 
 ### Install File
@@ -520,7 +520,7 @@ except subprocess.CalledProcessError:
       
 #### A tool to generate your setup file
  
-A contributor named [@kpacha](https://github.com/kpacha) has built a pure JavaScript tool for generating the `setup.py` file for a new framework via an in-browser form.  Check out his [FrameworkBenchmarks Setup Builder](http://kpacha.github.io/FrameworkBenchmarks-setup-builder/).
+A contributor named [@kpacha](http://beastpaint.com) has built a pure JavaScript tool for generating the `setup.py` file for a new framework via an in-browser form.  Check out his [FrameworkBenchmarks Setup Builder](http://beastpaint.com).
 
 ---
 
