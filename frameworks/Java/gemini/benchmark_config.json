@@ -65,9 +65,10 @@
         "versus": "servlet"
       },
       "firenio": {
-        "plaintext_url": "/test/plaintext",
+        "plaintext_url": "/plaintext",
+        "json_url": "/json",
         "port": 8080,
-        "approach": "Realistic",
+        "approach": "Stripped",
         "classification": "Fullstack",
         "database": "None",
         "framework": "Gemini",
