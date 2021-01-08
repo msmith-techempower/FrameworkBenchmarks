@@ -43,7 +43,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          DIFF=$(./toolset/github_actions/github_actions_diff.py)
+          DIFF=$(./utils/github_actions/github_actions_diff.py)
           echo "RUN_TESTS<<EOF" >> $GITHUB_ENV
           echo "$(grep -oP "github-actions-run-tests \K(.*)" <<< $DIFF || true)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
