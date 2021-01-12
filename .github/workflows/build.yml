@@ -53,6 +53,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
+          foo
           echo "DIFF<<EOF" >> $GITHUB_ENV
           echo "$(./toolset/github_actions/github_actions_diff.py)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
