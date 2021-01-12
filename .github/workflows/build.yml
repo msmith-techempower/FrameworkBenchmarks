@@ -4,6 +4,17 @@ jobs:
   setup:
     runs-on: ubuntu-20.04
     steps:
+      # Required for workflow triggers like the auto-label for failing PRs
+      - name: Save PR number
+        if: github.event_name == 'pull_request'
+        run: |
+          mkdir -p ./pr
+          echo ${{ github.event.number }} > ./pr/NR
+      - uses: actions/upload-artifact@v2
+        if: github.event_name == 'pull_request'
+        with:
+          name: pr
+          path: pr/
       # Commit branch/name extraction from:
       # https://github.community/t/accessing-commit-message-in-pull-request-event/17158/8
       #
@@ -71,16 +82,6 @@ jobs:
           # with a TESTLANG object in the include array for each language under frameworks
           VERIFY_MATRIX=$(ls -1 frameworks | jq -Rc '.+"/" | select(inside(env.RUN_TESTS))  | rtrimstr("/")' | jq -sc '{include: map({TESTLANG: .})}')
           echo "::set-output name=verify_matrix::$VERIFY_MATRIX"
-      - name: Save PR number
-        if: github.event_name == 'pull_request'
-        run: |
-          mkdir -p ./pr
-          echo ${{ github.event.number }} > ./pr/NR
-      - uses: actions/upload-artifact@v2
-        if: github.event_name == 'pull_request'
-        with:
-          name: pr
-          path: pr/
     outputs:
       commit_message: ${{ steps.event_out.outputs.commit_message }}
       branch_name: ${{ steps.event_out.outputs.branch_name }}
