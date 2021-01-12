@@ -11,6 +11,15 @@ jobs:
       github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-20.04
     steps:
+      - name: logging
+        env:
+          WORKFLOW_EVENT: ${{github.event.workflow_run.event}}
+          CONCLUSION: ${{github.event.workflow_run.conclusion}}
+          WORKFLOW_RUN_ID: ${{github.event.workflow_run.id}}
+        run: |
+          echo "WORKFLOW_EVENT: $WORKFLOW_EVENT"
+          echo "CONCLUSION: $CONCLUSION"
+          echo "WORKFLOW_RUN_ID: $WORKFLOW_RUN_ID"
       - name: 'Download artifact'
         uses: actions/github-script@v3.1.0
         with:
