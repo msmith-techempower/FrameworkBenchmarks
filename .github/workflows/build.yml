@@ -144,6 +144,8 @@ jobs:
       - name: Run tests if needed
         if: ${{ env.RUN_TESTS }}
         run: |
+          # Output the version of the toolset for debugging.
+          ./tfb_toolset --version
           # run-ci.py runs the diffing to see if github actions needs to test this framework. Ideally/eventually,
           # we'd like to try and do the diffing before github_actions_clean & setup.
           # This will run the tests exactly as you would in your own vm, but the

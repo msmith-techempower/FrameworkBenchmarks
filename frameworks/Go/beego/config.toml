@@ -11,6 +11,7 @@ orm = "raw"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]
 
 [orm-mysql]
 urls.db = "/db"
@@ -25,3 +26,4 @@ orm = "Micro"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]

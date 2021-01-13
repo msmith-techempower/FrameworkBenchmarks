@@ -4,6 +4,15 @@ name = "amber"
 [main]
 urls.plaintext = "/plaintext"
 urls.json = "/json"
+approach = "Realistic"
+classification = "Fullstack"
+os = "Linux"
+orm = "Full"
+platform = "None"
+webserver = "None"
+versus = "kemal"
+
+[db]
 urls.db = "/db"
 urls.query = "/queries?queries="
 urls.update = "/updates?queries="
@@ -17,3 +26,4 @@ orm = "Full"
 platform = "None"
 webserver = "None"
 versus = "kemal"
+tags = ["broken"]

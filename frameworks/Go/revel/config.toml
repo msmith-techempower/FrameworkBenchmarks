@@ -13,6 +13,7 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]
 
 [raw]
 urls.db = "/db"
@@ -28,6 +29,7 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]
 
 [qbs]
 urls.db = "/qbs-db"
@@ -43,6 +45,7 @@ orm = "micro"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]
 
 [jet]
 urls.db = "/jet-db"
@@ -58,6 +61,7 @@ orm = "micro"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]
 
 [fast]
 urls.plaintext = "/plaintext"
@@ -71,3 +75,4 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "go"
+tags = ["broken"]

@@ -28,7 +28,7 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "go"
-dockerfile = "aah.dockerfile"
+tags = ["broken"]
 
 [mysql]
 urls.db = "/db"
@@ -44,4 +44,4 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "go"
-dockerfile = "aah.dockerfile"
+tags = ["broken"]
