@@ -58,7 +58,7 @@ To get started developing you'll need to install [docker](https://docs.docker.co
 
 ## Add a New Test
 
-TODO
+TODO - eventually clone an example repo
 
 ## Resources
 
