@@ -1,5 +1,5 @@
 [framework]
-name = "aspnetcore"
+name = "aspnetcore-vb"
 
 [main]
 urls.plaintext = "/plaintext"
