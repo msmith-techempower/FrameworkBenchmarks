@@ -31,30 +31,32 @@ To get started developing you'll need to install [docker](https://docs.docker.co
 
 ### Running a Test Implementation
 
+TODO: add instructions for Windows/MacOS.
+
 1. Download the latest [`tfb_toolset`](https://github.com/TechEmpower/TFBToolset) binary:
 
-        $ curl -SO https://github.com/TechEmpower/TFBToolset/releases/latest/download/tfb_toolset
+        curl -SO https://github.com/TechEmpower/TFBToolset/releases/latest/download/tfb_toolset
 
 2. Optional: Move `tfb_toolset` onto the path:
 
-        $ mv tfb_toolset /usr/bin
+        mv tfb_toolset /usr/bin
 
 2. `tfb_toolset` searches 3 locations for a `FrameworkBenchmarks` repository, so do *ONE* of the following:
     * Set `TFB_HOME` environment variable
 
-            $ export TFB_HOME=/path/to/FrameworkBenchmarks
+            export TFB_HOME=/path/to/FrameworkBenchmarks
    
     * Clone to the default `TFB_HOME` of `~/.tfb`
     
-            $ clone --depth=1 https://github.com/TechEmpower/FrameworkBenchmarks ~/.tfb
+            clone --depth=1 https://github.com/TechEmpower/FrameworkBenchmarks ~/.tfb
     
     * Execute from `TFB_HOME` as the current directory:
 
-            $ cd /path/to/FrameworkBenchmarks
+            cd /path/to/FrameworkBenchmarks
 
 3. Run a test:
 
-        $ tfb_toolset --mode verify --test gemini
+        tfb_toolset --mode verify --test gemini
 
 ## Add a New Test
 
