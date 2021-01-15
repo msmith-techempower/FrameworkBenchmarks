@@ -25,6 +25,7 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "cpoll_cppsp"
+tags = ["broken"]
 
 [postgres-raw-threadpool]
 urls.db = "/db_pg_threadpool"
