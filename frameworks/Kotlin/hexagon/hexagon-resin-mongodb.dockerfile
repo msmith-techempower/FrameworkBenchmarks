@@ -23,6 +23,6 @@ RUN curl -sL $RESIN | tar xz --strip-components=1
 RUN rm -rf webapps/*
 COPY --from=gradle_build /hexagon/build/libs/ROOT.war webapps/ROOT.war
 
-EXPOSE 9090
+EXPOSE 8080
 
 CMD ["java", "-jar", "lib/resin.jar", "console"]
