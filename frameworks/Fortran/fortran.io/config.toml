@@ -1,0 +1,12 @@
+[framework]
+name = "fortran.io"
+
+[main]
+urls.plaintext = "/plaintext"
+approach = "Realistic"
+classification = "Fullstack"
+os = "Linux"
+orm = "Micro"
+platform = "None"
+webserver = "None"
+versus = ""
