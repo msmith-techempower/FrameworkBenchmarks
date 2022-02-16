@@ -1,7 +1,7 @@
 [framework]
 name = "rails"
 
-[mysql]
+[main]
 urls.plaintext = "/plaintext"
 urls.json = "/json"
 urls.db = "/db"
