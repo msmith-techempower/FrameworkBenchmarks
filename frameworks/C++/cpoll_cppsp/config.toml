@@ -6,7 +6,6 @@ urls.plaintext = "/plaintext"
 urls.json = "/json"
 approach = "Realistic"
 classification = "Platform"
-database = "None"
 database_os = "Linux"
 os = "Linux"
 orm = "Raw"
@@ -27,6 +26,7 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "cpoll_cppsp"
+#tags = ["broken"] # 2022-02-18 - msmith - server ran but never responded
 
 [postgres-raw-threadpool]
 urls.db = "/db_pg_threadpool"
