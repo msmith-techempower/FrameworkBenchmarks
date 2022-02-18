@@ -16,4 +16,4 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "onion"
-#tags = ["broken"] # 2022-02-18 - msmith - failing verification
+tags = ["broken"] # 2022-02-18 - msmith - failing verification

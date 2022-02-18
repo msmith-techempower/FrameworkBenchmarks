@@ -12,4 +12,4 @@ orm = "Raw"
 platform = "None"
 webserver = "None"
 versus = "octane"
-#tags = ["broken"] # 2022-02-18 - msmith - failed to build
+tags = ["broken"] # 2022-02-18 - msmith - failed to build

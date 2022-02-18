@@ -17,7 +17,7 @@ orm = "Raw"
 platform = "Lwan"
 webserver = "Lwan"
 versus = "None"
-#tags = ["broken"] # 2022-02-17 - msmith - it did not build
+tags = ["broken"] # 2022-02-17 - msmith - it did not build
 
 [lua]
 urls.plaintext = "/lua.plaintext"
@@ -31,4 +31,4 @@ orm = "Raw"
 platform = "Lwan"
 webserver = "Lwan"
 versus = "None"
-#tags = ["broken"] # 2022-02-17 - msmith - it did not build
+tags = ["broken"] # 2022-02-17 - msmith - it did not build
