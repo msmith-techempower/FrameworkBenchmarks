@@ -3,7 +3,7 @@ FROM ubuntu:21.10
 RUN apt-get update -yqq && \
 	apt-get install -yqq \
 		git pkg-config build-essential cmake zlib1g-dev \
-		libsqlite3-dev libmariadbclient-dev wget
+		libsqlite3-dev libmariadb-dev wget
 
 ADD ./ /lwan
 WORKDIR /lwan

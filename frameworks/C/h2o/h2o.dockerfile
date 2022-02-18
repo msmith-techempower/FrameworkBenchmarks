@@ -43,6 +43,8 @@ RUN mkdir -p "${H2O_BUILD_DIR}/build" && \
     cd ../.. && \
     rm -rf "$H2O_BUILD_DIR"
 
+RUN chmod a+x h2o.sh
+
 EXPOSE 8080
 
 CMD ["./h2o.sh"]

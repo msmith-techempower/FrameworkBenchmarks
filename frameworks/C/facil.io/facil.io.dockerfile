@@ -3,6 +3,7 @@ FROM gcc:6.4.0
 COPY ./ ./
 
 # using a common installation script will allow implementation variations (in future updates)
+RUN chmod a+x setup-common.sh
 RUN ./setup-common.sh
 
 # 1. we don't need more than 32K concurrent connections
